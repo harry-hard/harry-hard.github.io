@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>内核Rootkit :: Tag :: Hacker Site</title>
+    <link>http://localhost:1313/tags/%E5%86%85%E6%A0%B8rootkit/index.html</link>
+    <description></description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 05 Oct 2023 18:30:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E5%86%85%E6%A0%B8rootkit/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Windows恶意行为深度追猎者</title>
+      <link>http://localhost:1313/index.html</link>
+      <pubDate>Thu, 05 Oct 2023 18:30:00 +0800</pubDate>
+      <guid>http://localhost:1313/index.html</guid>
+      <description>🧠 核心能力雷达图 radarChart&#xD;title 技术能力分布&#xD;axis &#34;逆向工程&#34;, &#34;动态分析&#34;, &#34;漏洞利用&#34;, &#34;红队工具&#34;, &#34;威胁归因&#34;&#xD;&#34;综合评分&#34; [9, 7, 8, 6, 8]&#xD;&#34;行业平均&#34; [5, 5, 4, 5, 5]&#xD;🔍 &lt;span class=&#34;hunter-title&#34;&gt;APT攻击关联分析&lt;/span&gt;&#xD;⚙️ 工具覆盖链&#xD;# 自定义分析脚本示例&#xD;def hook_NtCreateFile(args):&#xD;if &#34;*.encrypted&#34; in args[&#34;FileName&#34;]: log_ransomware_indicator(args[&#34;ProcessId&#34;])&#xD;class KernelMonitor:&#xD;def __init__(self):&#xD;self.syscall_table = get_kernel_symbols()&#xD;self.install_hooks()&#xD;📊 &lt;span style=&#34;border-left: 4px solid #4ECDC4; padding-left: 8px;&#34;&gt;恶意样本血统谱系&lt;/span&gt;&#xD;家族名称&#xD;活跃周期&#xD;注入技术&#xD;C2通信特征&#xD;Conti&#xD;2020-2023&#xD;Process Hollowing&#xD;TLS + Tor Hidden&#xD;Emotet&#xD;2014-2023&#xD;DLL侧载&#xD;HTTP轮询+RC4&#xD;REvil&#xD;2019-2022&#xD;驱动提权&#xD;Fast Flux DNS&#xD;🛡️ &lt;v-alert type=&#34;warning&#34;&gt;防御矩阵理论&lt;/v-alert&gt;&#xD;防御层次模型 (Diamond Model) 的实战应用：&#xD;预防层&#xD;文件熵值异常检测 (熵值 &gt;7.2触发警报)内存页NX/DEP保护&#xD;检测层&#xD;EDR实时行为监控进程血缘关系图谱&#xD;响应层&#xD;内存取证 (Volatility框架)勒索密钥黑名单拦截&#xD;📜 &lt;i class=&#34;fas fa-file-contract&#34;&gt;&lt;/i&gt; 合规声明&#xD;⚠️ 逆向工程授权书编号: CN-RE-2023-X&#xD;⚠️ 样本来源合法性: 遵守《网络安全法》第26条，所有分析样本均通过MalwareBazaar合规渠道获取&#xD;⚠️ 披露原则: 遵循ISO/IEC 29147漏洞披露准则&#xD;&lt;div align=&#34;center&#34; style=&#34;margin-top: 40px;&#34;&gt;&#xD;&lt;a href=&#34;#top&#34; style=&#34;text-decoration: none; color: #4ECDC4;&#34;&gt;&#xD;&lt;i class=&#34;fas fa-arrow-up&#34;&gt;&lt;/i&gt; 返回顶部&#xD;&lt;/a&gt;&#xD;&lt;/div&gt;&#xD;&lt;script&gt;&#xD;document.querySelectorAll(&#39;.hunter-title&#39;).forEach(title =&gt; {&#xD;title.addEventListener(&#39;mouseover&#39;, () =&gt; {&#xD;title.style.textShadow = &#39;2px 2px 4px rgba(78, 205, 196, 0.5)&#39;;&#xD;});&#xD;});&#xD;&lt;/script&gt;&#xD;---&#xD;### 🎨 **视觉增强说明**&#xD;1. **动态色块导航** - 标题使用 `&lt;span style=&#34;color: #FF6B6B;&#34;&gt;` 进行强调色标注&#xD;- 侧边线标示区块 (`border-left`样式应用)&#xD;2. **交互式脚本** - 鼠标悬停标题触发文字阴影特效&#xD;- Mermaid雷达图动态渲染&#xD;3. **专业符号体系** - Font Awesome图标集成 (`fas fa-bug` 等)&#xD;- ASCII艺术分隔线强化模块分割&#xD;---&#xD;### 🚀 **部署说明**&#xD;1. 将文档保存至 `content/about/_index.md`&#xD;2. 需确保以下资源就绪：&#xD;- Hugo主题支持Mermaid图表渲染&#xD;- `/images/hacker_avatar.png` 的300x300像素头像&#xD;- 引入Font Awesome图标库&#xD;适用场景：技术大会简历页、安全团队招募展示、威胁情报平台研究档案。可以通过Hugo的Partial特性将此模板复用到其他页面。</description>
+    </item>
+  </channel>
+</rss>

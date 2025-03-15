@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>导入表修复 :: Hacker Site</title><link>https://harry-hard.github.io/pe-loader/iat%E4%BF%AE%E5%A4%8D/index.html</link><description/><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 15 Dec 2024 15:30:00 +0800</lastBuildDate><atom:link href="https://harry-hard.github.io/pe-loader/iat%E4%BF%AE%E5%A4%8D/index.xml" rel="self" type="application/rss+xml"/><item><title>修复Import Address Table</title><link>https://harry-hard.github.io/pe-loader/iat%E4%BF%AE%E5%A4%8D/iat%E4%BF%AE%E5%A4%8D/index.html</link><pubDate>Sun, 15 Dec 2024 15:30:00 +0800</pubDate><guid>https://harry-hard.github.io/pe-loader/iat%E4%BF%AE%E5%A4%8D/iat%E4%BF%AE%E5%A4%8D/index.html</guid><description>IAT修复 IAT修复有双层循环，第一层循环是判断还有没有dll文件，第二层循环是判断dll内的函数到没到头。
+导入表的访问从IMAGE_DATA_DIRECTORY结构开始
+pehdr.peNtHdr->OptionalHeader.DataDirectory[IMAGE_DIRECTORY_ENTRY_IMPORT]
+在pe的基地址加上这个IMAGE_DATA_DIRECTORY的VA，访问到第一个PIMAGE_IMPORT_DESCRIPTOR结构
+IMAGE_IMPORT_DESCRIPTOR 结构体布局
+| 偏移 | 字段名称 | 类型 | 大小(字节) | 说明 |
+|——|———-|——|————|——|
+| 0x00 | OriginalFirstThunk | DWORD | 4 | 指向 INT (导入名称表) 的 RVA |
+| 0x04 | TimeDateStamp | DWORD | 4 | 时间戳，0表示未绑定 |
+| 0x08 | ForwarderChain | DWORD | 4 | 转发链信息 |
+| 0x0C | Name | DWORD | 4 | 指向 DLL 名称字符串的 RVA |</description></item><item><title>更多导入表内容</title><link>https://harry-hard.github.io/pe-loader/iat%E4%BF%AE%E5%A4%8D/%E6%9B%B4%E5%A4%9A/index.html</link><pubDate>Sun, 15 Dec 2024 15:30:00 +0800</pubDate><guid>https://harry-hard.github.io/pe-loader/iat%E4%BF%AE%E5%A4%8D/%E6%9B%B4%E5%A4%9A/index.html</guid><description/></item></channel></rss>
