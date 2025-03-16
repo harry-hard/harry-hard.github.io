@@ -5,41 +5,27 @@
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta name="generator" content="Hugo 0.145.0">
     <meta name="generator" content="Relearn 7.5.0+9a020e7eadb7d8203f5b01b18756c72d94773ec9">
-    <meta name="description" content="编译器选择">
+    <meta name="robots" content="noindex, nofollow, noarchive, noimageindex">
+    <meta name="description" content="">
     <meta name="author" content="">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="最重要的是编译器 :: Hacker Site">
-    <meta name="twitter:description" content="编译器选择">
-    <meta property="og:url" content="http://localhost:1313/pe-loader/%E7%BC%96%E8%AF%91%E5%99%A8%E9%80%89%E6%8B%A9/%E7%BC%96%E8%AF%91%E5%99%A8%E9%80%89%E6%8B%A9/index.html">
+    <meta property="og:url" content="http://localhost:1313/reflectivedllinjection/%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9-1b3b0dda5d5c80e89a76d4453b47a505/index.html">
     <meta property="og:site_name" content="Hacker Site">
-    <meta property="og:title" content="最重要的是编译器 :: Hacker Site">
-    <meta property="og:description" content="编译器选择">
     <meta property="og:locale" content="en_us">
     <meta property="og:type" content="article">
-    <meta property="article:section" content="pe loader">
-    <meta property="article:published_time" content="2024-12-15T15:30:00+08:00">
-    <meta property="article:modified_time" content="2024-12-15T15:30:00+08:00">
-    <meta property="article:tag" content="逆向工程">
-    <meta property="article:tag" content="Windows系统">
-    <meta property="article:tag" content="病毒分析">
-    <meta itemprop="name" content="最重要的是编译器 :: Hacker Site">
-    <meta itemprop="description" content="编译器选择">
-    <meta itemprop="datePublished" content="2024-12-15T15:30:00+08:00">
-    <meta itemprop="dateModified" content="2024-12-15T15:30:00+08:00">
-    <meta itemprop="wordCount" content="40">
-    <meta itemprop="keywords" content="逆向工程,Windows系统,病毒分析">
-    <title>最重要的是编译器 :: Hacker Site</title>
-    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1742123416" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1742123416" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1742123416" rel="stylesheet">
-    <link href="/css/theme.css?1742123416" rel="stylesheet">
-    <link href="/css/format-html.css?1742123416" rel="stylesheet" id="R-format-style">
-    <link href="/css/auto-complete/auto-complete.min.css?1742123416" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1742123416" defer></script>
-    <script src="/js/lunr/lunr.min.js?1742123416" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1742123416" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1742123416" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1742123416" defer></script>
-    <script src="/js/search.js?1742123416" defer></script>
+    <meta property="article:section" content="reflective DLL injection">
+    <title></title>
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1742122763" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1742122763" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1742122763" rel="stylesheet">
+    <link href="/css/theme.css?1742122763" rel="stylesheet">
+    <link href="/css/format-html.css?1742122763" rel="stylesheet" id="R-format-style">
+    <link href="/css/auto-complete/auto-complete.min.css?1742122763" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1742122763" defer></script>
+    <script src="/js/lunr/lunr.min.js?1742122763" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1742122763" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1742122763" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1742122763" defer></script>
+    <script src="/js/search.js?1742122763" defer></script>
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -48,7 +34,7 @@
       window.relearn.relBaseUri='..\/..\/..';
       window.relearn.absBaseUri='http:\/\/localhost:1313';
       window.relearn.contentLangs=['en'];
-      window.relearn.index_js_url="/searchindex.en.js?1742123416";
+      window.relearn.index_js_url="/searchindex.en.js?1742122763";
       window.relearn.disableAnchorCopy=false;
       window.relearn.disableAnchorScrolling=false;
       window.relearn.disableInlineCopyToClipboard=false;
@@ -93,7 +79,7 @@
       window.T_N_results_found = `{1} results found for "{0}"`;
     </script>
   </head>
-  <body class="mobile-support html" data-url="/pe-loader/%E7%BC%96%E8%AF%91%E5%99%A8%E9%80%89%E6%8B%A9/%E7%BC%96%E8%AF%91%E5%99%A8%E9%80%89%E6%8B%A9/index.html">
+  <body class="mobile-support html" data-url="/reflectivedllinjection/%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9-1b3b0dda5d5c80e89a76d4453b47a505/index.html">
     <div id="R-body" class="default-animation">
       <div id="R-body-overlay"></div>
       <nav id="R-topbar">
@@ -111,14 +97,13 @@
           </div>
           <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList">
             <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">hacker 0x0ff</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li>
-            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/pe-loader/index.html"><span itemprop="name">pe loader</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li>
-            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/pe-loader/%E7%BC%96%E8%AF%91%E5%99%A8%E9%80%89%E6%8B%A9/index.html"><span itemprop="name">更重要的...</span></a><meta itemprop="position" content="3">&nbsp;>&nbsp;</li>
-            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">最重要的是编译器</span><meta itemprop="position" content="4"></li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/reflectivedllinjection/index.html"><span itemprop="name">reflective DLL injection</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li>
+            <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/reflectivedllinjection/%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/index.html"><span itemprop="name">注意事项1</span></a><meta itemprop="position" content="3">&nbsp;>&nbsp;</li>
           </ol>
           <div class="topbar-area topbar-area-end" data-area="end">
-            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/pe-loader/%E7%BC%96%E8%AF%91%E5%99%A8%E9%80%89%E6%8B%A9/index.html" title="更重要的... (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/reflectivedllinjection/%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/index.html" title="注意事项1 (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
             </div>
-            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/reflectivedllinjection/index.html" title="reflective DLL injection (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/reflectivedllinjection/%E5%AF%BC%E5%87%BA%E8%A1%A8%E8%8E%B7%E5%8F%96%E7%A3%81%E7%9B%98/index.html" title="获取磁盘格式的pe文件 (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
             </div>
             <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
               <div class="topbar-content">
@@ -132,122 +117,16 @@
         </div>
       </nav>
       <div id="R-main-overlay"></div>
-      <main id="R-body-inner" class="highlightable pe-loader" tabindex="-1">
+      <main id="R-body-inner" class="highlightable reflectivedllinjection" tabindex="-1">
         <div class="flex-block-wrapper">
 <article class="default">
   <header class="headline">
-<div class="R-taxonomy taxonomy-tags cstyle tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
-  <ul>
-    <li><a class="term-link" href="/tags/windows%E7%B3%BB%E7%BB%9F/index.html">Windows系统</a></li>
-    <li><a class="term-link" href="/tags/%E7%97%85%E6%AF%92%E5%88%86%E6%9E%90/index.html">病毒分析</a></li>
-    <li><a class="term-link" href="/tags/%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/index.html">逆向工程</a></li>
-  </ul>
-</div>
   </header>
 
-<h1 id="最重要的是编译器">最重要的是编译器</h1>
+<h1 id=""></h1>
 
-<h1 id="编译器选择">编译器选择</h1>
-<p>在windows系统级编程中，当MinGW编译时，这些关键的系统调用会通过MinGW的包装层：</p>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">// MinGW内部可能的实现过程
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>VirtualAlloc <span style="color:#f92672">-&gt;</span> _mingw_VirtualAlloc <span style="color:#f92672">-&gt;</span> ntdll<span style="color:#f92672">!</span>NtAllocateVirtualMemory</span></span></code></pre></div>
-<p>这导致：
-内存分配可能不符合Windows PE加载要求
-页面权限设置可能不完全正确
-系统调用的参数传递可能有偏差</p>
-<p><strong>更严重的问题 - 加载器本身的内存布局也会因为不是标准windows编译器而改变</strong></p>
-<p>如果一定要用MinGW编译PE加载器，需要：</p>
-<ol>
-<li>
-<p>避免使用MinGW的API包装层</p>
-</li>
-<li>
-<p>直接使用系统调用或ntdll函数</p>
-</li>
-<li>
-<p>确保内存对齐和保护属性正确</p>
-</li>
-<li>
-<p>手动实现某些Windows内部功能</p>
-</li>
-<li>
-<ol>
-<li>避免使用MinGW的API包装层</li>
-</ol>
-</li>
-<li>
-<ol>
-<li>直接使用系统调用或ntdll函数</li>
-</ol>
-</li>
-<li>
-<ol>
-<li>确保内存对齐和保护属性正确</li>
-</ol>
-</li>
-<li>
-<ol>
-<li>手动实现某些Windows内部功能</li>
-</ol>
-</li>
-</ol>
-<p>但说实话，这样做：</p>
-<ol>
-<li>
-<p>开发难度大大增加</p>
-</li>
-<li>
-<p>可能引入新的兼容性问题</p>
-</li>
-<li>
-<p>维护成本很高</p>
-</li>
-<li>
-<ol>
-<li>开发难度大大增加</li>
-</ol>
-</li>
-<li>
-<ol>
-<li>可能引入新的兼容性问题</li>
-</ol>
-</li>
-<li>
-<ol>
-<li>维护成本很高</li>
-</ol>
-</li>
-</ol>
-<p>所以最终建议还是：</p>
-<ol>
-<li>
-<p>使用MSVC编译PE加载器</p>
-</li>
-<li>
-<p>或者使用更底层的方法（如直接系统调用）</p>
-</li>
-<li>
-<p>如果一定要用MinGW，需要重写大量底层代码</p>
-</li>
-<li>
-<ol>
-<li>使用MSVC编译PE加载器</li>
-</ol>
-</li>
-<li>
-<ol>
-<li>或者使用更底层的方法（如直接系统调用）</li>
-</ol>
-</li>
-<li>
-<ol>
-<li>如果一定要用MinGW，需要重写大量底层代码</li>
-</ol>
-</li>
-</ol>
 
   <footer class="footline">
-              <i class='fa-fw fas fa-calendar'></i> Dec 15, 2024
   </footer>
 </article>
         </div>
@@ -281,14 +160,12 @@
       <div id="R-content-wrapper" class="highlightable">
         <div id="R-shortcutmenu-home" class="R-sidebarmenu">
           <ul class="enlarge morespace collapsible-menu">
-            <li class="parent " data-nav-id="/pe-loader/index.html"><a class="padding" href="/pe-loader/index.html">pe loader</a><ul id="R-subsections-b27e0d39d59d447cd6e01a6338b15cad" class="collapsible-menu">
-            <li class="" data-nav-id="/pe-loader/%E5%86%99%E5%85%A5pe%E8%87%B3%E5%86%85%E5%AD%98/index.html"><a class="padding" href="/pe-loader/%E5%86%99%E5%85%A5pe%E8%87%B3%E5%86%85%E5%AD%98/index.html">1.将硬盘上的PE文件写入内存</a></li>
-            <li class="alwaysopen " data-nav-id="/pe-loader/%E9%87%8D%E5%AE%9A%E4%BD%8D%E8%A1%A8%E7%9A%84%E5%A4%84%E7%90%86/index.html"><a class="padding" href="/pe-loader/%E9%87%8D%E5%AE%9A%E4%BD%8D%E8%A1%A8%E7%9A%84%E5%A4%84%E7%90%86/index.html">重定位的处理</a><ul id="R-subsections-5538d5163e3e5b134ed33c38ea97b798" class="collapsible-menu"></ul></li>
-            <li class="alwaysopen " data-nav-id="/pe-loader/iat%E4%BF%AE%E5%A4%8D/index.html"><a class="padding" href="/pe-loader/iat%E4%BF%AE%E5%A4%8D/index.html">导入表修复</a><ul id="R-subsections-8faa9ffa9793fc8c6b192d64127072eb" class="collapsible-menu"></ul></li>
-            <li class="" data-nav-id="/pe-loader/%E6%9D%83%E9%99%90%E4%BF%AE%E5%A4%8D/index.html"><a class="padding" href="/pe-loader/%E6%9D%83%E9%99%90%E4%BF%AE%E5%A4%8D/index.html">节区权限处理</a></li>
-            <li class="parent alwaysopen " data-nav-id="/pe-loader/%E7%BC%96%E8%AF%91%E5%99%A8%E9%80%89%E6%8B%A9/index.html"><a class="padding" href="/pe-loader/%E7%BC%96%E8%AF%91%E5%99%A8%E9%80%89%E6%8B%A9/index.html">更重要的...</a><ul id="R-subsections-78710a4b49ef4e266364a3acafaca347" class="collapsible-menu">
-            <li class="active " data-nav-id="/pe-loader/%E7%BC%96%E8%AF%91%E5%99%A8%E9%80%89%E6%8B%A9/%E7%BC%96%E8%AF%91%E5%99%A8%E9%80%89%E6%8B%A9/index.html"><a class="padding" href="/pe-loader/%E7%BC%96%E8%AF%91%E5%99%A8%E9%80%89%E6%8B%A9/%E7%BC%96%E8%AF%91%E5%99%A8%E9%80%89%E6%8B%A9/index.html">最重要的是编译器</a></li></ul></li></ul></li>
-            <li class="" data-nav-id="/reflectivedllinjection/index.html"><a class="padding" href="/reflectivedllinjection/index.html">reflective DLL injection</a><ul id="R-subsections-052ebd8e8922a30eac354e1344f7f6d2" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/pe-loader/index.html"><a class="padding" href="/pe-loader/index.html">pe loader</a><ul id="R-subsections-b27e0d39d59d447cd6e01a6338b15cad" class="collapsible-menu"></ul></li>
+            <li class="parent " data-nav-id="/reflectivedllinjection/index.html"><a class="padding" href="/reflectivedllinjection/index.html">reflective DLL injection</a><ul id="R-subsections-052ebd8e8922a30eac354e1344f7f6d2" class="collapsible-menu">
+            <li class="" data-nav-id="/reflectivedllinjection/%E5%87%BD%E6%95%B0%E6%80%BB%E8%A7%88/index.html"><a class="padding" href="/reflectivedllinjection/%E5%87%BD%E6%95%B0%E6%80%BB%E8%A7%88/index.html">函数总览</a></li>
+            <li class="parent alwaysopen " data-nav-id="/reflectivedllinjection/%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/index.html"><a class="padding" href="/reflectivedllinjection/%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/index.html">注意事项1</a><ul id="R-subsections-35d88a8cc2378dac5aca4a09c6ef8a09" class="collapsible-menu">
+            <li class="active hidden " data-nav-id="/reflectivedllinjection/%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9-1b3b0dda5d5c80e89a76d4453b47a505/index.html"><a class="padding" href="/reflectivedllinjection/%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9-1b3b0dda5d5c80e89a76d4453b47a505/index.html"></a></li></ul></li>
+            <li class="" data-nav-id="/reflectivedllinjection/%E5%AF%BC%E5%87%BA%E8%A1%A8%E8%8E%B7%E5%8F%96%E7%A3%81%E7%9B%98/index.html"><a class="padding" href="/reflectivedllinjection/%E5%AF%BC%E5%87%BA%E8%A1%A8%E8%8E%B7%E5%8F%96%E7%A3%81%E7%9B%98/index.html">获取磁盘格式的pe文件</a></li></ul></li>
           </ul>
         </div>
         <div class="padding footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showFooter"></div>
@@ -303,7 +180,7 @@
                   <div class="control-style">
                     <label class="a11y-only" for="R-select-language">Language</label>
                     <select id="R-select-language" onchange="location = this.querySelector( `#R-select-language-${this.value}` ).dataset.url;">
-                      <option id="R-select-language-en" value="en" data-url="/pe-loader/%E7%BC%96%E8%AF%91%E5%99%A8%E9%80%89%E6%8B%A9/%E7%BC%96%E8%AF%91%E5%99%A8%E9%80%89%E6%8B%A9/index.html" lang="en-us" selected></option>
+                      <option id="R-select-language-en" value="en" data-url="/reflectivedllinjection/%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9-1b3b0dda5d5c80e89a76d4453b47a505/index.html" lang="en-us" selected></option>
                     </select>
                   </div>
                   <div class="clear"></div>
@@ -341,8 +218,8 @@
         </div>
       </div>
     </aside>
-    <script src="/js/clipboard/clipboard.min.js?1742123416" defer></script>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1742123416" defer></script>
-    <script src="/js/theme.js?1742123416" defer></script>
+    <script src="/js/clipboard/clipboard.min.js?1742122763" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1742122763" defer></script>
+    <script src="/js/theme.js?1742122763" defer></script>
   </body>
 </html>
