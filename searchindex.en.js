@@ -72,7 +72,7 @@ var relearn_searchindex = [
     "uri": "/tags/%E4%B9%A6%E8%AF%84/index.html"
   },
   {
-    "breadcrumb": "hacker 0x0ff \u003e  hacker 0x0ff",
+    "breadcrumb": "hacker 0x0ff \u003e  书评",
     "content": "《周期书评》 很好的书，比较适合刚刚入门股票的小白\n书中主要讲了如何判断我们现在所处的周期位置，我们不可能预测周期，但可以通过现在的市场和政策表现来判断目前市场所处的位置\n本书最主要的内容就是：\n周期永远存在\n周期有很多种，人的心理钟摆会加强周期\n在人们恐惧时贪婪，在人们贪婪时恐惧",
     "description": "《周期书评》 很好的书，比较适合刚刚入门股票的小白\n书中主要讲了如何判断我们现在所处的周期位置，我们不可能预测周期，但可以通过现在的市场和政策表现来判断目前市场所处的位置\n本书最主要的内容就是：\n周期永远存在\n周期有很多种，人的心理钟摆会加强周期\n在人们恐惧时贪婪，在人们贪婪时恐惧",
     "tags": [
@@ -123,25 +123,25 @@ var relearn_searchindex = [
     "uri": "/index.html"
   },
   {
-    "breadcrumb": "hacker 0x0ff",
-    "content": "",
-    "description": "",
-    "tags": [
-      "读书",
-      "摘要",
-      "投资",
-      "书评"
-    ],
-    "title": "hacker 0x0ff",
-    "uri": "/%E4%B9%A6%E8%AF%84/index.html"
-  },
-  {
     "breadcrumb": "hacker 0x0ff \u003e  Tags",
     "content": "",
     "description": "",
     "tags": [],
     "title": "Tag :: Windows系统",
     "uri": "/tags/windows%E7%B3%BB%E7%BB%9F/index.html"
+  },
+  {
+    "breadcrumb": "hacker 0x0ff",
+    "content": "text",
+    "description": "text",
+    "tags": [
+      "读书",
+      "摘要",
+      "投资",
+      "书评"
+    ],
+    "title": "书评",
+    "uri": "/%E4%B9%A6%E8%AF%84/index.html"
   },
   {
     "breadcrumb": "hacker 0x0ff \u003e  Tags",
