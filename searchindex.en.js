@@ -132,8 +132,8 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "hacker 0x0ff",
-    "content": "text",
-    "description": "text",
+    "content": "周期 霍华德·马克斯",
+    "description": "周期 霍华德·马克斯",
     "tags": [
       "读书",
       "摘要",
@@ -189,8 +189,8 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "hacker 0x0ff",
-    "content": "函数总览\n导出表获取\n注意事项",
-    "description": "函数总览\n导出表获取\n注意事项",
+    "content": "函数总览\n导出表获取\n注意事项\nwindbg调试",
+    "description": "函数总览\n导出表获取\n注意事项\nwindbg调试",
     "tags": [
       "逆向工程",
       "Windows系统",
@@ -198,6 +198,27 @@ var relearn_searchindex = [
     ],
     "title": "reflective DLL injection",
     "uri": "/reflectivedllinjection/index.html"
+  },
+  {
+    "breadcrumb": "hacker 0x0ff \u003e  Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: Windbg",
+    "uri": "/tags/windbg/index.html"
+  },
+  {
+    "breadcrumb": "hacker 0x0ff \u003e  reflective DLL injection",
+    "content": "通过windbg调试dll:\n首先要用relese模式编译dll文件，这样pdb调试文件的校验和才会注册\n接下来要在注入器把dll注入到宿主进程之前，windbg附加到宿主进程\n附加到宿主进程后会自动触发断点：\n确保dll目录中有与之匹配的pdb文件\n接下来输入需要加载的符号文件(.pdb)\n.sympath+ C:\\Project\\Debug # 添加DLL的PDB路径（需编译时生成） .reload /f mydll.dll #重新加载要查看的dll的符号文件 重要！\n在注入之前打上在dllmain上断点\nbp myDll!DLLmain 接下来运行程序，\ng 然后执行注入程序\n如果pdb文件正确导入，那么在注入成功的一瞬间，会触发windbg的断点\n调试pe结构：\n# 假设DLL基地址为0x180000000： !dh 0x180000000 # 打印PE头（查找可选头） dt ntdll!_IMAGE_OPTIONAL_HEADER # 查看可选头结构定义 ? 0x180000000 + \u003cImportTable RVA\u003e # 计算导入表实际地址 基地址在processHacker2内可以找到\n!dh 0x你的基地址 会打印头部信息\n如果想要手动查找nt头和可选头，可以使用\n# 读取 e_lfanew 的值（基址 + 0x3C） dd 0x你的基地址 + 0x3C L1 #3C是e_lfanew的固定大小 打印的100是nt头的偏移\n# 基址 + NT Headers偏移 db 0x你的基地址 + 0x100 验证前4个字节是否为 50 45 00 00（nt头固定）\n接下来通过基址+nt偏移+Signature+file header长度\n# 查看 Optional Header 的全部内容（通常长度 0xE0） db 0x你的基质 + 0xnt的偏移 + 0x(Signature+file header长度) L0xE0 如果使用dc会更清楚：\n可以看到.text和.rdata字符",
+    "description": "通过windbg调试dll:\n首先要用relese模式编译dll文件，这样pdb调试文件的校验和才会注册\n接下来要在注入器把dll注入到宿主进程之前，windbg附加到宿主进程\n附加到宿主进程后会自动触发断点：\n确保dll目录中有与之匹配的pdb文件\n接下来输入需要加载的符号文件(.pdb)\n.sympath+ C:\\Project\\Debug # 添加DLL的PDB路径（需编译时生成） .reload /f mydll.dll #重新加载要查看的dll的符号文件 重要！\n在注入之前打上在dllmain上断点\nbp myDll!DLLmain 接下来运行程序，\ng 然后执行注入程序\n如果pdb文件正确导入，那么在注入成功的一瞬间，会触发windbg的断点\n调试pe结构：\n# 假设DLL基地址为0x180000000： !dh 0x180000000 # 打印PE头（查找可选头） dt ntdll!_IMAGE_OPTIONAL_HEADER # 查看可选头结构定义 ? 0x180000000 + \u003cImportTable RVA\u003e # 计算导入表实际地址 基地址在processHacker2内可以找到\n!dh 0x你的基地址 会打印头部信息\n如果想要手动查找nt头和可选头，可以使用\n# 读取 e_lfanew 的值（基址 + 0x3C） dd 0x你的基地址 + 0x3C L1 #3C是e_lfanew的固定大小 打印的100是nt头的偏移\n# 基址 + NT Headers偏移 db 0x你的基地址 + 0x100 验证前4个字节是否为 50 45 00 00（nt头固定）",
+    "tags": [
+      "Windbg",
+      "Dll注入",
+      "Windows系统",
+      "病毒分析"
+    ],
+    "title": "windbg调试dll",
+    "uri": "/reflectivedllinjection/windbg_dll/index.html"
   },
   {
     "breadcrumb": "hacker 0x0ff \u003e  reflective DLL injection",

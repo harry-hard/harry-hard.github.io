@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>windbg调试dll :: Hacker Site</title><link>https://harry-hard.github.io/reflectivedllinjection/windbg_dll/index.html</link><description>通过windbg调试dll:
+首先要用relese模式编译dll文件，这样pdb调试文件的校验和才会注册
+接下来要在注入器把dll注入到宿主进程之前，windbg附加到宿主进程
+附加到宿主进程后会自动触发断点：
+确保dll目录中有与之匹配的pdb文件
+接下来输入需要加载的符号文件(.pdb)
+.sympath+ C:\Project\Debug # 添加DLL的PDB路径（需编译时生成） .reload /f mydll.dll #重新加载要查看的dll的符号文件 重要！
+在注入之前打上在dllmain上断点
+bp myDll!DLLmain 接下来运行程序，
+g 然后执行注入程序
+如果pdb文件正确导入，那么在注入成功的一瞬间，会触发windbg的断点
+调试pe结构：
+# 假设DLL基地址为0x180000000： !dh 0x180000000 # 打印PE头（查找可选头） dt ntdll!_IMAGE_OPTIONAL_HEADER # 查看可选头结构定义 ? 0x180000000 + &lt;ImportTable RVA> # 计算导入表实际地址 基地址在processHacker2内可以找到
+!dh 0x你的基地址 会打印头部信息
+如果想要手动查找nt头和可选头，可以使用
+# 读取 e_lfanew 的值（基址 + 0x3C） dd 0x你的基地址 + 0x3C L1 #3C是e_lfanew的固定大小 打印的100是nt头的偏移
+# 基址 + NT Headers偏移 db 0x你的基地址 + 0x100 验证前4个字节是否为 50 45 00 00（nt头固定）</description><generator>Hugo</generator><language>en-us</language><lastBuildDate/><atom:link href="https://harry-hard.github.io/reflectivedllinjection/windbg_dll/index.xml" rel="self" type="application/rss+xml"/></channel></rss>
