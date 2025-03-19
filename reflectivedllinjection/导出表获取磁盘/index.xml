@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>获取磁盘dll(未加载)的导出表 :: Hacker Site</title><link>https://harry-hard.github.io/reflectivedllinjection/%E5%AF%BC%E5%87%BA%E8%A1%A8%E8%8E%B7%E5%8F%96%E7%A3%81%E7%9B%98/index.html</link><description>磁盘中的RVA和加载后的RVA访问方式是不同的
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>获取磁盘dll(未加载)的导出表 :: Hacker Site</title><link>http://hacker0x0ff.red/reflectivedllinjection/%E5%AF%BC%E5%87%BA%E8%A1%A8%E8%8E%B7%E5%8F%96%E7%A3%81%E7%9B%98/index.html</link><description>磁盘中的RVA和加载后的RVA访问方式是不同的
 如果已经按内存要求加载：
 基地址+DataDirectory[0]
 如果还是硬盘格式：
 偏移量 = RVA - 区段的VirtualAddress + 区段的PointerToRawData 基地址+偏移量
-这里主要理解内存格式和硬盘格式对RVA的影响</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate><atom:link href="https://harry-hard.github.io/reflectivedllinjection/%E5%AF%BC%E5%87%BA%E8%A1%A8%E8%8E%B7%E5%8F%96%E7%A3%81%E7%9B%98/index.xml" rel="self" type="application/rss+xml"/></channel></rss>
+这里主要理解内存格式和硬盘格式对RVA的影响</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate><atom:link href="http://hacker0x0ff.red/reflectivedllinjection/%E5%AF%BC%E5%87%BA%E8%A1%A8%E8%8E%B7%E5%8F%96%E7%A3%81%E7%9B%98/index.xml" rel="self" type="application/rss+xml"/></channel></rss>
