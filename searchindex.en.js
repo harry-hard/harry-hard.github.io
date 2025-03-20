@@ -189,8 +189,8 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "hacker 0x0ff",
-    "content": "函数总览\n导出表获取\n注意事项\nwindbg调试",
-    "description": "函数总览\n导出表获取\n注意事项\nwindbg调试",
+    "content": "函数总览\n导出表获取\n注意事项\nwindbg调试dll\nwindbg查看PEB",
+    "description": "函数总览\n导出表获取\n注意事项\nwindbg调试dll\nwindbg查看PEB",
     "tags": [
       "逆向工程",
       "Windows系统",

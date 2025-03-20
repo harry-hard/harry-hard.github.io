@@ -34,7 +34,8 @@ IAT修复
 重定位表的处理</description></item><item><title>reflective DLL injection</title><link>http://hacker0x0ff.red/reflectivedllinjection/index.html</link><pubDate>Sun, 15 Dec 2024 15:30:00 +0800</pubDate><guid>http://hacker0x0ff.red/reflectivedllinjection/index.html</guid><description>函数总览
 导出表获取
 注意事项
-windbg调试</description></item><item><title>windbg访问peb结构</title><link>http://hacker0x0ff.red/reflectivedllinjection/windbg_peb/index.html</link><pubDate>Sun, 15 Dec 2024 15:30:00 +0800</pubDate><guid>http://hacker0x0ff.red/reflectivedllinjection/windbg_peb/index.html</guid><description>对于peb来说，ldr结构体指向的PEB_LDR_DATA结构;
+windbg调试dll
+windbg查看PEB</description></item><item><title>windbg访问peb结构</title><link>http://hacker0x0ff.red/reflectivedllinjection/windbg_peb/index.html</link><pubDate>Sun, 15 Dec 2024 15:30:00 +0800</pubDate><guid>http://hacker0x0ff.red/reflectivedllinjection/windbg_peb/index.html</guid><description>对于peb来说，ldr结构体指向的PEB_LDR_DATA结构;
 PEB_LDR_DATA包含InMemoryOrderModuleList
 InMemoryOrderModuleList 是链表的头节点
 #首先更新符号： .reload /f ntdll.dll #查看peb，可以区分是x86还是x64: !peb 虽然是amd64架构，但程序是x86

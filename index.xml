@@ -11,4 +11,5 @@ IAT修复
 重定位表的处理</description></item><item><title>reflective DLL injection</title><link>http://hacker0x0ff.red/reflectivedllinjection/index.html</link><pubDate>Sun, 15 Dec 2024 15:30:00 +0800</pubDate><guid>http://hacker0x0ff.red/reflectivedllinjection/index.html</guid><description>函数总览
 导出表获取
 注意事项
-windbg调试</description></item></channel></rss>
+windbg调试dll
+windbg查看PEB</description></item></channel></rss>
