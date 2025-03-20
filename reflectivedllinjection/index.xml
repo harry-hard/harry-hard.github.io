@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>reflective DLL injection :: Hacker Site</title><link>http://hacker0x0ff.red/reflectivedllinjection/index.html</link><description>函数总览
 导出表获取
 注意事项
-windbg调试</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 15 Dec 2024 15:30:00 +0800</lastBuildDate><atom:link href="http://hacker0x0ff.red/reflectivedllinjection/index.xml" rel="self" type="application/rss+xml"/><item><title>windbg调试dll</title><link>http://hacker0x0ff.red/reflectivedllinjection/windbg_dll/index.html</link><pubDate>Sun, 15 Dec 2024 15:30:00 +0800</pubDate><guid>http://hacker0x0ff.red/reflectivedllinjection/windbg_dll/index.html</guid><description>通过windbg调试dll:
+windbg调试</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 15 Dec 2024 15:30:00 +0800</lastBuildDate><atom:link href="http://hacker0x0ff.red/reflectivedllinjection/index.xml" rel="self" type="application/rss+xml"/><item><title>windbg访问peb结构</title><link>http://hacker0x0ff.red/reflectivedllinjection/windbg_peb/index.html</link><pubDate>Sun, 15 Dec 2024 15:30:00 +0800</pubDate><guid>http://hacker0x0ff.red/reflectivedllinjection/windbg_peb/index.html</guid><description>对于peb来说，ldr结构体指向的PEB_LDR_DATA结构;
+PEB_LDR_DATA包含InMemoryOrderModuleList
+InMemoryOrderModuleList 是链表的头节点
+#首先更新符号： .reload /f ntdll.dll #查看peb，可以区分是x86还是x64: !peb 虽然是amd64架构，但程序是x86
+（下文InMemoryOrderModuleList和InMemoryOrderLinks不要搞混）
+所以有PEB_LDR_DATA→InMemoryOrderModuleList
+InMemoryOrderModuleList→Flink，
+Flink包含的指针指向LDR_DATA_TABLE_ENTRY
+在LDR_DATA_TABLE_ENTRY 中又有InMemoryOrderLinks （和InMemoryOrderModuleList完全不是一回事，其中InMemoryOrderModuleList 是头节点，而InMemoryOrderLinks 是链表的组成部分）
+**InMemoryOrderModuleList**32位进程中，于PEB_LDR_DATA中的偏移（offset）为0x14,
+64位偏移为0x20;
+InMemoryOrderLinks 32位进程中，在LDR_DATA_TABLE_ENTRY中的偏移为0x08，
+64位偏移为0x10;
+classDiagram class PEB { +0x00 Ldr : Ptr64 _PEB_LDR_DATA } class PEB_LDR_DATA { +0x00 Length : Uint4B +0x04 Initialized : UChar +0x08 SsHandle : Ptr64 Void +0x10 InLoadOrderModuleList : _LIST_ENTRY (32位偏移: 0x0C) +0x20 InMemoryOrderModuleList : _LIST_ENTRY (32位偏移: 0x14 | 64位偏移: 0x20) +0x30 InInitializationOrderModuleList : _LIST_ENTRY } class LDR_DATA_TABLE_ENTRY { +0x00 InLoadOrderLinks : _LIST_ENTRY (链表节点1) +0x08 InMemoryOrderLinks : _LIST_ENTRY (32位偏移: 0x08 | 64位偏移: 0x10) +0x10 InInitializationOrderLinks : _LIST_ENTRY +0x18 DllBase : Ptr64 Void +0x20 BaseDllName : _UNICODE_STRING } class _LIST_ENTRY { +0x00 Flink : Ptr64 _LIST_ENTRY +0x08 Blink : Ptr64 _LIST_ENTRY } PEB --> PEB_LDR_DATA : Ldr PEB_LDR_DATA --> _LIST_ENTRY : InMemoryOrderModuleList (头节点) _LIST_ENTRY --> LDR_DATA_TABLE_ENTRY : Flink -> InMemoryOrderLinks (链表节点) 1.</description></item><item><title>windbg调试dll</title><link>http://hacker0x0ff.red/reflectivedllinjection/windbg_dll/index.html</link><pubDate>Sun, 15 Dec 2024 15:30:00 +0800</pubDate><guid>http://hacker0x0ff.red/reflectivedllinjection/windbg_dll/index.html</guid><description>通过windbg调试dll:
 首先要用relese模式编译dll文件，这样pdb调试文件的校验和才会注册
 接下来要在注入器把dll注入到宿主进程之前，windbg附加到宿主进程
 附加到宿主进程后会自动触发断点：
