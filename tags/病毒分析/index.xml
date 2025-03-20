@@ -23,7 +23,10 @@ PE 节区属性 内存保护属性 (WinAPI) EXECUTE PAGE_EXECUTE READ PAGE_READO
 代码注释：
 BOOL FixMemPermissions(IN ULONG_PTR pPeBaseAddress, IN PIMAGE_NT_HEADERS pImgNtHdrs, IN PIMAGE_SECTION_HEADER pImgSecHdr) { //其中pPeBaseAddress：是使用virtualAlloc分配的PE基地址 //IN PIMAGE_NT_HEADERS pImgNtHdrs：是Headers.NTheaders //IN PIMAGE_SECTION_HEADER pImgSecHdr:是IMAGE_SECTION_HEADER里面的Characteristics for (DWORD i = 0; i &lt; pImgNtHdrs->FileHeader.</description></item><item><title>hacker 0x0ff</title><link>http://hacker0x0ff.red/index.html</link><pubDate>Sat, 15 Mar 2025 15:30:00 +0800</pubDate><guid>http://hacker0x0ff.red/index.html</guid><description>欢迎我的朋友 👋 你好！我是 Harry，一名专注于Windows系统恶意软件分析的安全研究员。
 我的研究领域 🔍 恶意软件逆向工程与分析 🛡️ Windows系统漏洞研究 � 病毒行为特征提取 🚫 反病毒规避技术研究 📊 威胁情报分析 常用技术栈 工具集： - IDA Pro - OllyDbg - WinDbg - Wireshark - VirtualBox沙箱环境 编程语言： - C（样本复现） - Python（自动化分析） - PowerShell（系统检测） - Assembly（逆向工程） 最新研究重点 目前正在深入分析以下方向的恶意软件样本：
-反射式dll注入(202502至今) 反射式dll注入 PE文件加载器(2024-12至2025-02) PE Loader</description></item><item><title>pe loader</title><link>http://hacker0x0ff.red/pe-loader/index.html</link><pubDate>Sun, 15 Dec 2024 15:30:00 +0800</pubDate><guid>http://hacker0x0ff.red/pe-loader/index.html</guid><description>Local PE Injection 把PE(可执行)文件映射到内存并使之成功执行，和shellcode不一样，shellcode注入简单，PE映射困难(.exe .dll)
+反射式dll注入(202502至今)
+反射式dll注入
+PE文件加载器(2024-12至2025-02)
+PE Loader</description></item><item><title>pe loader</title><link>http://hacker0x0ff.red/pe-loader/index.html</link><pubDate>Sun, 15 Dec 2024 15:30:00 +0800</pubDate><guid>http://hacker0x0ff.red/pe-loader/index.html</guid><description>Local PE Injection 把PE(可执行)文件映射到内存并使之成功执行，和shellcode不一样，shellcode注入简单，PE映射困难(.exe .dll)
 IAT修复
 写入PE至内存
 权限修复
