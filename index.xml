@@ -12,4 +12,5 @@ IAT修复
 导出表获取
 注意事项
 windbg调试dll
-windbg查看PEB</description></item></channel></rss>
+windbg查看PEB
+通过PEB和PE获取函数地址</description></item></channel></rss>
