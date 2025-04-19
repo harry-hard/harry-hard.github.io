@@ -147,8 +147,8 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "",
-    "content": "欢迎我的朋友 👋 你好！我是 Harry，一名专注于Windows系统恶意软件分析的安全研究员。\n我的研究领域 🔍 恶意软件逆向工程与分析 🛡️ Windows系统漏洞研究 � 病毒行为特征提取 🚫 反病毒规避技术研究 📊 威胁情报分析 常用技术栈 工具集： - IDA Pro - OllyDbg - WinDbg - Wireshark - VirtualBox沙箱环境 编程语言： - C（样本复现） - Python（自动化分析） - PowerShell（系统检测） - Assembly（逆向工程） 最新研究重点 目前正在深入分析以下方向的恶意软件样本：\n反射式dll注入(202502至今)\n反射式dll注入\nPE文件加载器(2024-12至2025-02)\nPE Loader",
-    "description": "欢迎我的朋友 👋 你好！我是 Harry，一名专注于Windows系统恶意软件分析的安全研究员。\n我的研究领域 🔍 恶意软件逆向工程与分析 🛡️ Windows系统漏洞研究 � 病毒行为特征提取 🚫 反病毒规避技术研究 📊 威胁情报分析 常用技术栈 工具集： - IDA Pro - OllyDbg - WinDbg - Wireshark - VirtualBox沙箱环境 编程语言： - C（样本复现） - Python（自动化分析） - PowerShell（系统检测） - Assembly（逆向工程） 最新研究重点 目前正在深入分析以下方向的恶意软件样本：\n反射式dll注入(202502至今)\n反射式dll注入\nPE文件加载器(2024-12至2025-02)\nPE Loader",
+    "content": "欢迎我的朋友 👋 你好！我是 Harry，一名专注于Windows系统恶意软件分析的安全研究员。\n我的研究领域 🔍 恶意软件逆向工程与分析 🛡️ Windows系统漏洞研究 � 病毒行为特征提取 🚫 反病毒规避技术研究 📊 威胁情报分析 常用技术栈 工具集： - IDA Pro - OllyDbg - WinDbg - Wireshark - VirtualBox沙箱环境 编程语言： - C（样本复现） - Python（自动化分析） - PowerShell（系统检测） - Assembly（逆向工程） 最新研究重点 目前正在深入分析以下方向的恶意软件样本：\nbloody stealer 信息窃取病毒代码分析(2025/04/19至今)\n反射式dll注入(2025/02至2025/04/19)\n反射式dll注入\nPE文件加载器(2024-12至2025-02)\nPE Loader",
+    "description": "欢迎我的朋友 👋 你好！我是 Harry，一名专注于Windows系统恶意软件分析的安全研究员。\n我的研究领域 🔍 恶意软件逆向工程与分析 🛡️ Windows系统漏洞研究 � 病毒行为特征提取 🚫 反病毒规避技术研究 📊 威胁情报分析 常用技术栈 工具集： - IDA Pro - OllyDbg - WinDbg - Wireshark - VirtualBox沙箱环境 编程语言： - C（样本复现） - Python（自动化分析） - PowerShell（系统检测） - Assembly（逆向工程） 最新研究重点 目前正在深入分析以下方向的恶意软件样本：\nbloody stealer 信息窃取病毒代码分析(2025/04/19至今)\n反射式dll注入(2025/02至2025/04/19)\n反射式dll注入\nPE文件加载器(2024-12至2025-02)\nPE Loader",
     "tags": [
       "安全研究",
       "逆向工程",
@@ -201,8 +201,8 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "hacker 0x0ff",
-    "content": "函数总览\n导出表获取\n注意事项\nwindbg调试dll\nwindbg查看PEB\n通过PEB和PE获取函数地址",
-    "description": "函数总览\n导出表获取\n注意事项\nwindbg调试dll\nwindbg查看PEB\n通过PEB和PE获取函数地址",
+    "content": "项目地址 source code: Github-ReflectiveInjection\n函数总览\n导出表获取\n注意事项\nwindbg调试dll\nwindbg查看PEB\n通过PEB和PE获取函数地址",
+    "description": "项目地址 source code: Github-ReflectiveInjection\n函数总览\n导出表获取\n注意事项\nwindbg调试dll\nwindbg查看PEB\n通过PEB和PE获取函数地址",
     "tags": [
       "逆向工程",
       "Windows系统",
@@ -282,8 +282,8 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "hacker 0x0ff \u003e  reflective DLL injection",
-    "content": "在编写dll部分时，为了方便执行dll，我写了一个程序快速执行dll\nHMODULE dllname = LoadLibraryA(\"dll.dll\"); if (!dllname) { printf(\"dllname don't exitsts!\\n\"); return 0; } ReflectiveLoaderFunc myfuc = (ReflectiveLoaderFunc)GetProcAddress(dllname, \"ReflectiveLoader\"); myfuc(); 然而这样的程序在反射式dll处理重定位表时会出大问题： • 通过 LoadLibrary 加载的DLL已被系统修改（重定位+导入表处理），.reloc 节可能被丢弃或擦写。",
-    "description": "在编写dll部分时，为了方便执行dll，我写了一个程序快速执行dll\nHMODULE dllname = LoadLibraryA(\"dll.dll\"); if (!dllname) { printf(\"dllname don't exitsts!\\n\"); return 0; } ReflectiveLoaderFunc myfuc = (ReflectiveLoaderFunc)GetProcAddress(dllname, \"ReflectiveLoader\"); myfuc(); 然而这样的程序在反射式dll处理重定位表时会出大问题： • 通过 LoadLibrary 加载的DLL已被系统修改（重定位+导入表处理），.reloc 节可能被丢弃或擦写。",
+    "content": "在编写dll部分时，为了方便执行dll，我写了一个程序快速执行dll\nHMODULE dllname = LoadLibraryA(\"dll.dll\"); if (!dllname) { printf(\"dllname don't exitsts!\\n\"); return 0; } ReflectiveLoaderFunc myfuc = (ReflectiveLoaderFunc)GetProcAddress(dllname, \"ReflectiveLoader\"); myfuc(); 然而这样的程序在反射式dll处理重定位表时会出大问题： • 通过 LoadLibrary 加载的DLL已被系统修改（重定位+导入表处理），.reloc 节可能被丢弃或擦写。\n及其重要的一点是不要提前返回，因为反射式注入的dll代码无法及时调试，所以一定要勤用反汇编软件查看内存分配，或在注入器代码中内嵌调试语句。",
+    "description": "在编写dll部分时，为了方便执行dll，我写了一个程序快速执行dll\nHMODULE dllname = LoadLibraryA(\"dll.dll\"); if (!dllname) { printf(\"dllname don't exitsts!\\n\"); return 0; } ReflectiveLoaderFunc myfuc = (ReflectiveLoaderFunc)GetProcAddress(dllname, \"ReflectiveLoader\"); myfuc(); 然而这样的程序在反射式dll处理重定位表时会出大问题： • 通过 LoadLibrary 加载的DLL已被系统修改（重定位+导入表处理），.reloc 节可能被丢弃或擦写。\n及其重要的一点是不要提前返回，因为反射式注入的dll代码无法及时调试，所以一定要勤用反汇编软件查看内存分配，或在注入器代码中内嵌调试语句。",
     "tags": [
       "Dll注入",
       "Windows系统",
