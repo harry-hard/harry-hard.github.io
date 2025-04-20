@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Source Code :: Tag :: Hacker Site</title><link>http://hacker0x0ff.red/tags/source-code/index.html</link><description/><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 20 Apr 2025 15:30:00 +0800</lastBuildDate><atom:link href="http://hacker0x0ff.red/tags/source-code/index.xml" rel="self" type="application/rss+xml"/><item><title>BloodyStealer源码分析</title><link>http://hacker0x0ff.red/%E7%97%85%E6%AF%92%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/bloodystealer/index.html</link><pubDate>Sun, 20 Apr 2025 15:30:00 +0800</pubDate><guid>http://hacker0x0ff.red/%E7%97%85%E6%AF%92%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/bloodystealer/index.html</guid><description>恶意软件分析报告 - BloodyStealer 重整化病毒代码github 原始代码github(反编译输出) 1. 概述 这份分析报告基于对一个名为BloodyStealer的恶意软件样本的逆向工程分析。该恶意软件主要设计用于从受感染系统中窃取各种敏感信息，包括浏览器凭据、游戏平台账户信息、即时通讯工具数据以及其他敏感文件。代码经过大量混淆处理，但通过分析，我们可以确定其主要功能和工作原理。
+2. 代码结构分析 2.1 主程序结构 恶意软件的主要功能在Program.cs文件的Main方法中实现，该方法负责协调整个恶意软件的运行流程：
+防重复执行机制：
+生成一个基于系统特征的唯一标识符 检查特定目录是否存在标记文件，如存在则退出 执行完毕后在随机选择的目录创建标记文件 反分析技术：
+反虚拟机检测(Anti.VT.Core.Execute()) 反逆向工程技术(Anti.Reverse.Core.Execute()) 检测独联体(CIS)国家，如果用户位于这些国家则退出 多线程数据收集：
+浏览器数据收集线程(Application.Grabber.Browsers.Core.Execute()) 应用程序数据收集线程(Application.Grabber.Applications.Core.Execute()) 文件数据收集线程(Files.Execute()) 数据处理与发送：
+处理收集的数据，去除重复项 收集系统信息和屏幕截图 创建ZIP归档文件 将数据发送到远程服务器 2.2 混淆特征 代码显示出明显的混淆特征，这表明它已经过反混淆处理:
+无意义的命名：
+类名使用格式如c0000b4、delegate0c9等无语义命名 方法名使用格式如f000094、m000001等序列名称 字符串加密：
+使用c0000c0.m00000f("ýn*\rÈ\u001a")等形式的加密字符串 所有明文字符串都被替换为加密形式 控制流混淆：
+使用如delegate0da.f0000d7(-3)的数值来控制执行流程 复杂的switch语句和goto标签结构 无限循环和条件跳转的非结构化组合 委托调用：
+使用委托字段而非直接方法调用，如delegate0c9.f000094 方法与实现分离，增加跟踪难度 3. 功能分析 3.1 数据收集目标 恶意软件针对以下数据类型进行收集：
+浏览器数据：
+保存的密码 (Chromium_Edited.Passwords) Cookies (Chromium_Edited.Cookies和Firefox_Edited.Cookies) 自动填充表单数据 (Chromium_Edited.Forms) 保存的信用卡信息 (Chromium_Edited.Cards) 应用程序账户数据：
+Telegram聊天工具 游戏平台: EpicGames、GOG、Origin、Steam、VimeWorld 文件共享: uTorrent 系统信息：
+用户名 IP地址和地理位置信息 屏幕截图 特定类型的用户文件 3.</description></item></channel></rss>
