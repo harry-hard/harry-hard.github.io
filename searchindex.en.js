@@ -223,8 +223,8 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "",
-    "content": "欢迎我的朋友 👋 你好！我是 Harry，一名专注于Windows系统恶意软件分析的安全研究员。\n我的研究领域 🔍 恶意软件逆向工程与分析 🛡️ Windows系统漏洞研究 � 病毒行为特征提取 🚫 反病毒规避技术研究 📊 威胁情报分析 常用技术栈 工具集： - IDA Pro - OllyDbg - WinDbg - Wireshark - VirtualBox沙箱环境 编程语言： - C（样本复现） - Python（自动化分析） - PowerShell（系统检测） - Assembly（逆向工程） 最新研究重点 目前正在深入分析以下方向的恶意软件样本：\nbloody stealer 信息窃取病毒代码分析(2025/04/19至今)\ngithub_code\n反射式dll注入(2025/02至2025/04/19)\n反射式dll注入\nPE文件加载器(2024-12至2025-02)\nPE Loader",
-    "description": "欢迎我的朋友 👋 你好！我是 Harry，一名专注于Windows系统恶意软件分析的安全研究员。\n我的研究领域 🔍 恶意软件逆向工程与分析 🛡️ Windows系统漏洞研究 � 病毒行为特征提取 🚫 反病毒规避技术研究 📊 威胁情报分析 常用技术栈 工具集： - IDA Pro - OllyDbg - WinDbg - Wireshark - VirtualBox沙箱环境 编程语言： - C（样本复现） - Python（自动化分析） - PowerShell（系统检测） - Assembly（逆向工程） 最新研究重点 目前正在深入分析以下方向的恶意软件样本：\nbloody stealer 信息窃取病毒代码分析(2025/04/19至今)\ngithub_code\n反射式dll注入(2025/02至2025/04/19)\n反射式dll注入\nPE文件加载器(2024-12至2025-02)\nPE Loader",
+    "content": "欢迎我的朋友 👋 你好！我是 Harry，一名专注于Windows系统恶意软件分析的安全研究员。\n我的研究领域 🔍 恶意软件逆向工程与分析 🛡️ Windows系统漏洞研究 � 病毒行为特征提取 🚫 反病毒规避技术研究 📊 威胁情报分析 常用技术栈 工具集： - IDA Pro - OllyDbg - WinDbg - Wireshark - VirtualBox沙箱环境 编程语言： - C（样本复现） - Python（自动化分析） - PowerShell（系统检测） - Assembly（逆向工程） 最新研究重点 predator the Thief 恶意病毒\ncheckpoint网站研究\nbloody stealer 信息窃取病毒代码分析(2025/04/19至2025/04/20)\ngithub_code\n反射式dll注入(2025/02至2025/04/19)\n反射式dll注入\nPE文件加载器(2024-12至2025-02)\nPE Loader",
+    "description": "欢迎我的朋友 👋 你好！我是 Harry，一名专注于Windows系统恶意软件分析的安全研究员。\n我的研究领域 🔍 恶意软件逆向工程与分析 🛡️ Windows系统漏洞研究 � 病毒行为特征提取 🚫 反病毒规避技术研究 📊 威胁情报分析 常用技术栈 工具集： - IDA Pro - OllyDbg - WinDbg - Wireshark - VirtualBox沙箱环境 编程语言： - C（样本复现） - Python（自动化分析） - PowerShell（系统检测） - Assembly（逆向工程） 最新研究重点 predator the Thief 恶意病毒\ncheckpoint网站研究\nbloody stealer 信息窃取病毒代码分析(2025/04/19至2025/04/20)\ngithub_code\n反射式dll注入(2025/02至2025/04/19)\n反射式dll注入\nPE文件加载器(2024-12至2025-02)\nPE Loader",
     "tags": [
       "安全研究",
       "逆向工程",
