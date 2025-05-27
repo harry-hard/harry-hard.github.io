@@ -56,24 +56,17 @@ var relearn_searchindex = [
     "uri": "/tags/bloodystealer/index.html"
   },
   {
-    "breadcrumb": "hacker 0x0ff \u003e  病毒源码分析 \u003e  Predator The Thief源码分析",
-    "content": "这是Predator The Thief病毒源码中浏览器密码提取的单独部分，两部分示例代码分别使用python和c语言编写，仅支持edge，Google chrome，以及chrome内核的其他浏览器\n浏览器密码提取 流程图与原理说明 本文档解释浏览器密码提取工具的工作原理和流程。\ngithub\n工作流程图 flowchart TD A[开始] --\u003e B[获取浏览器信息] B --\u003e C{浏览器文件存在?} C --\u003e|否| D[报错: 文件不存在] C --\u003e|是| E[读取加密主密钥] E --\u003e F{主密钥获取成功?} F --\u003e|否| G[报错: 主密钥获取失败] F --\u003e|是| H[复制数据库到临时文件] H --\u003e I[连接SQLite数据库] I --\u003e J[查询密码记录] J --\u003e K[遍历每条密码记录] K --\u003e L{密码格式是v10?} L --\u003e|是| M[使用AES-GCM解密] L --\u003e|否| N[使用DPAPI解密] M --\u003e O[显示解密结果] N --\u003e O O --\u003e P{还有更多记录?} P --\u003e|是| K P --\u003e|否| Q[显示统计信息] Q --\u003e R[结束] 密码解密原理 现代浏览器采用两级加密策略来保护存储的密码：\n主密钥获取 浏览器在Local State文件中存储加密的主密钥 主密钥使用Windows DPAPI (Data Protection API)加密 使用CryptUnprotectData函数解密主密钥 密码解密 v10格式 (Chrome/Edge最新格式) 格式: v10 + IV(12字节) + 加密数据 + 认证标签(16字节) 使用AES-GCM算法和主密钥解密 旧格式 直接使用DPAPI (CryptUnprotectData)解密 实现细节 浏览器密码存储位置 Chrome: %LOCALAPPDATA%\\Google\\Chrome\\User Data\\Default\\Login Data Edge: %LOCALAPPDATA%\\Microsoft\\Edge\\User Data\\Default\\Login Data 主密钥存储位置 Chrome: %LOCALAPPDATA%\\Google\\Chrome\\User Data\\Local State Edge: %LOCALAPPDATA%\\Microsoft\\Edge\\User Data\\Local State 密码数据库 SQLite格式 包含URL、用户名和加密密码 查询: SELECT origin_url, username_value, password_value FROM logins 安全注意事项 本工具仅用于教育目的。未经授权访问他人密码数据可能违反法律法规。使用本工具时请遵守相关法律和道德准则。",
-    "description": "这是Predator The Thief病毒源码中浏览器密码提取的单独部分，两部分示例代码分别使用python和c语言编写，仅支持edge，Google chrome，以及chrome内核的其他浏览器\n浏览器密码提取 流程图与原理说明 本文档解释浏览器密码提取工具的工作原理和流程。\ngithub\n工作流程图 flowchart TD A[开始] --\u003e B[获取浏览器信息] B --\u003e C{浏览器文件存在?} C --\u003e|否| D[报错: 文件不存在] C --\u003e|是| E[读取加密主密钥] E --\u003e F{主密钥获取成功?} F --\u003e|否| G[报错: 主密钥获取失败] F --\u003e|是| H[复制数据库到临时文件] H --\u003e I[连接SQLite数据库] I --\u003e J[查询密码记录] J --\u003e K[遍历每条密码记录] K --\u003e L{密码格式是v10?} L --\u003e|是| M[使用AES-GCM解密] L --\u003e|否| N[使用DPAPI解密] M --\u003e O[显示解密结果] N --\u003e O O --\u003e P{还有更多记录?} P --\u003e|是| K P --\u003e|否| Q[显示统计信息] Q --\u003e R[结束] 密码解密原理 现代浏览器采用两级加密策略来保护存储的密码：",
-    "tags": [
-      "病毒",
-      "源代码",
-      "分析",
-      "Windows",
-      "BloodyStealer",
-      "Source Code"
-    ],
-    "title": "predator the thief浏览器密码提取",
-    "uri": "/%E7%97%85%E6%AF%92%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/predator-the-thief/browser-decipher/index.html"
+    "breadcrumb": "hacker 0x0ff",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Categories",
+    "uri": "/categories/index.html"
   },
   {
-    "breadcrumb": "hacker 0x0ff \u003e  病毒源码分析",
-    "content": "浏览器密码提取\n病毒源码分析报告",
-    "description": "浏览器密码提取\n病毒源码分析报告",
+    "breadcrumb": "hacker 0x0ff \u003e  病毒源码分析 \u003e  Predator The Thief源码分析",
+    "content": "Predator恶意软件分析报告 概述 Predator The Thief是一款复杂的信息窃取恶意软件，主要针对Windows操作系统。根据代码版本号，当前分析的版本为v3.3.4。该恶意软件具有多种功能，包括浏览器数据窃取、密码收集、加密货币钱包窃取、Telegram/Discord等通讯软件数据窃取，以及远程控制功能。\n📌 版本信息: v3.3.4 Release\n执行流程 flowchart TD A[程序入口: WinMain] --\u003e B[执行反调试检测] B --\u003e|未检测到调试| C[获取机器HWID] B --\u003e|检测到调试| Z[终止执行] C --\u003e D[创建互斥体确保单一实例运行] D --\u003e|互斥体创建成功| E[初始化Stealing对象] D --\u003e|互斥体已存在| Z E --\u003e F[从C2服务器获取配置] F --\u003e G{反虚拟机检测} G --\u003e|检测到虚拟机环境| Z G --\u003e|非虚拟机环境| H[开始数据窃取] H --\u003e H1[获取VPN/通讯软件数据] H --\u003e H2[窃取浏览器数据] H --\u003e H3[窃取密码/Cookie] H --\u003e H4[窃取Telegram/Discord数据] H --\u003e H5[获取加密货币钱包] H --\u003e H6[收集系统信息] H --\u003e H7[捕获屏幕/摄像头] H1 \u0026 H2 \u0026 H3 \u0026 H4 \u0026 H5 \u0026 H6 \u0026 H7 --\u003e I[压缩数据准备上传] I --\u003e J[将数据上传到C2服务器] J --\u003e K[执行服务器返回的附加指令] K --\u003e L[下载和执行额外模块] L --\u003e M[执行PowerShell脚本] M --\u003e N{是否自删除} N --\u003e|是| O[删除自身] N --\u003e|否| P[结束执行] O --\u003e P 基本信息 属性 值 恶意软件名称 Predator The Thief (又名Win32.PredatorTheStealer) 版本 v3.3.4 Release 作者标识 Alexuiop1337 目标平台 Windows系统 主要功能 信息窃取，模块化下载，远程控制 技术特征 反分析技术 Predator使用多种反分析技术以逃避检测：\n🛡️ 反分析技术摘要\n字符串加密（XOR） API动态解析（隐藏导入表） 反调试检测 反虚拟机检测 代码完整性验证 反反汇编技术 字符串加密：使用XOR函数对所有字符串进行加密，包括文件路径、注册表键和命令\n#define XOR(x) XorStr(x) char* krnl = XOR(\"Kernel32.dll\"); API动态解析：使用FNC宏通过GetProcAddress和GetModuleHandle函数在运行时动态解析Windows API\n#define FNC(x, y) reinterpret_cast\u003cdecltype(\u0026x)\u003e(GetProcAddress(GetModuleHandleA(y), #x)) HANDLE mutex = FNC(CreateMutexA, krnl)(NULL, FALSE, base64_encode(Stealer::hwid).substr(0, 8).c_str()); 反调试检测：实现了AntiDebug类，可以检测调试器并防止程序在调试环境中运行\nAntiDebug antiDbg(hExeModule, \u0026codeInt, \u0026wasCalled); if (antiDbg.Detect()) return 0; 反虚拟机检测：通过检测虚拟机特征来防止在分析环境中运行\nif (grabber.bAntiVm \u0026\u0026 File.antiVmInstance()-\u003eIsVM()) return; 代码完整性验证：通过哈希值检查确保代码没有被修改\nif (crc32_hash(Stealer::UpLoadLink) != Stealer::panel_hash) return; 反反汇编技术：使用ANTIDASM宏创建不可预测的控制流，干扰静态分析\n#define ANTIDASM(call_name) ANTIDASM(call_name, __COUNTER__) ANTIDASM(Stealer::GetHwid); 窃取功能详细分析 1. 浏览器数据窃取 flowchart LR Browser[浏览器数据窃取] --\u003e Chrome[Chrome系列] Browser --\u003e Firefox[Firefox系列] Browser --\u003e Edge[Edge浏览器] Chrome --\u003e C_Pass[密码窃取] Chrome --\u003e C_Cookie[Cookie窃取] Chrome --\u003e C_Form[表单数据] Chrome --\u003e C_Card[信用卡信息] Firefox --\u003e F_Pass[密码窃取] Firefox --\u003e F_Cookie[Cookie窃取] Firefox --\u003e F_Form[表单数据] Firefox --\u003e F_History[历史记录] Edge --\u003e E_Pass[密码窃取] Edge --\u003e E_Cookie[Cookie窃取] C_Pass \u0026 F_Pass \u0026 E_Pass --\u003e Decrypt[使用CryptUnprotectData解密] C_Cookie \u0026 F_Cookie \u0026 E_Cookie --\u003e Format[Netscape格式保存] Predator可以从多种浏览器中窃取敏感数据：\n支持的浏览器：Chrome、Firefox、Edge、Opera等主流浏览器 窃取数据类型： 保存的密码 Cookie 自动填充表单数据 信用卡信息 浏览历史 浏览器数据窃取使用以下方法：\n对于基于Chromium的浏览器： 通过SQL查询访问浏览器的SQLite数据库 使用CryptUnprotectData解密受保护数据 对于Firefox浏览器： 使用专用的FireFoxGrabber类处理Mozilla特有的加密 解析key3.db或key4.db文件获取主密钥 解密logins.json或signons.sqlite文件中的密码 2. 加密货币钱包窃取 💰 窃取目标\nBitcoin钱包文件 以太坊钱包数据 加密货币交易所配置 Predator会搜索和窃取加密货币钱包文件：\n递归搜索目标目录查找wallet.dat文件 复制各种加密货币相关文件和配置 3. 通讯软件数据窃取 Telegram void Stealing::GetTelegram(const string \u0026 output_dir){ // 查找Telegram安装位置 // 窃取会话数据 bool group1 = CopyByMask(teleg_path, XOR(\"D877F783D5D3EF8C*\"), output_dir); teleg_path += (string)XOR(\"\\\\D877F783D5D3EF8C\"); bool group2 = CopyByMask(teleg_path, XOR(\"map*\"), output_dir); } Telegram窃取功能主要复制D877F783D5D3EF8C开头的文件，这些文件包含Telegram会话数据和配置信息。\nDiscord void Stealing::GetDiscord(const string \u0026 output_dir){ // 窃取Discord本地存储数据 bool group1 = CopyByMask(discord_path, XOR(\"https_discordapp.com*.localstorage\"), output_dir); bool group2 = CopyByMask(discord_path + XOR(\"\\\\leveldb\"), \"*\", output_dir); } 从Discord的LocalStorage文件夹窃取会话数据和tokens。\n4. FTP客户端凭据窃取 void Stealing::GetFtpClient(const string \u0026 output_dir){ // 窃取FileZilla配置 // 窃取WinFTP配置 } 从FileZilla和WinFTP等FTP客户端窃取服务器连接信息和凭据。\n5. 系统信息收集 void Stealing::GetInformation(const string \u0026 output_path, const string \u0026 hwid, unsigned int hash){ // 收集系统详细信息 // 包括用户名、计算机名、硬件信息等 } 收集详细的系统信息，包括：\n操作系统版本 CPU和GPU信息 已安装软件列表 计算机用户列表 剪贴板内容 键盘布局 6. 屏幕捕获功能 void Stealing::GetScreenShot(){ // 捕获屏幕截图 } void Stealing::GetWebcamScreen(const string \u0026 output_path){ // 捕获网络摄像头图像 } 可以捕获屏幕截图和网络摄像头图像，并保存为位图文件。\n网络通信 sequenceDiagram participant Victim as 受害主机 participant C2 as 命令控制服务器 Victim-\u003e\u003eC2: 请求配置 (api/check.get) C2-\u003e\u003eVictim: 返回窃取配置 Note over Victim: 收集数据并压缩 Victim-\u003e\u003eC2: 上传数据 (api/gate.get?p1=...) C2-\u003e\u003eVictim: 返回后续指令 Note over Victim: 执行附加指令 opt 二次载荷 C2-\u003e\u003eVictim: 下载额外模块 Note over Victim: 执行下载的模块 end Predator使用HTTP协议与C2服务器通信：\nbool Stealing::Release(const string \u0026 server, const string \u0026 path, const string \u0026 file_name){ // 上传窃取的数据到C2服务器 } Grabber Stealing::GetSettings(const string\u0026 url, const string\u0026 query){ // 从C2服务器获取配置 } 通信协议：标准HTTP，可选择支持HTTPS 数据格式：ZIP压缩包形式上传窃取的数据 服务器请求： 获取配置：api/check.get 上传数据：api/gate.get?p1=... 下载额外模块：通过Loader类实现 模块化下载与执行 Predator通过Loader类支持二次载荷：\nvoid execute(const vector\u003cLoaderRule\u003e \u0026 rules, bool cryptoWallet, vector\u003cLoadedFileState\u003e \u0026 threads); 支持多种执行方式：\nRunPE（进程注入） CreateProcess（创建新进程） ShellExecute（shell执行） LoadPE（内存加载PE） LoadLibrary（加载DLL） 自我保护与持久化 ⚠️ 持久化机制\nPredator使用多种技术确保在系统中持久存在，并防止重复感染\n互斥体防重复运行：使用基于HWID的互斥体确保只有一个实例运行 可选自删除：支持执行后删除自身 PowerShell持久化：可执行自定义PowerShell脚本实现持久化 总结 Predator The Thief是一款功能强大的窃密木马，采用模块化设计，具有强大的反分析能力和广泛的信息窃取功能。它针对不同类型的敏感数据使用特定的方法进行窃取，并通过HTTP协议将数据上传到远程服务器。其设计显示出相当的技术复杂性，同时具备二次感染和远程控制能力。\n防御建议 🔒 关键防御措施\n保持操作系统和安全软件更新 使用多因素认证保护重要账户 避免在不受信任的环境中输入敏感信息 定期检查已安装的软件和运行的进程 使用密码管理器而非让浏览器记住密码 为加密货币钱包使用硬件钱包解决方案",
+    "description": "Predator恶意软件分析报告 概述 Predator The Thief是一款复杂的信息窃取恶意软件，主要针对Windows操作系统。根据代码版本号，当前分析的版本为v3.3.4。该恶意软件具有多种功能，包括浏览器数据窃取、密码收集、加密货币钱包窃取、Telegram/Discord等通讯软件数据窃取，以及远程控制功能。\n📌 版本信息: v3.3.4 Release\n执行流程 flowchart TD A[程序入口: WinMain] --\u003e B[执行反调试检测] B --\u003e|未检测到调试| C[获取机器HWID] B --\u003e|检测到调试| Z[终止执行] C --\u003e D[创建互斥体确保单一实例运行] D --\u003e|互斥体创建成功| E[初始化Stealing对象] D --\u003e|互斥体已存在| Z E --\u003e F[从C2服务器获取配置] F --\u003e G{反虚拟机检测} G --\u003e|检测到虚拟机环境| Z G --\u003e|非虚拟机环境| H[开始数据窃取] H --\u003e H1[获取VPN/通讯软件数据] H --\u003e H2[窃取浏览器数据] H --\u003e H3[窃取密码/Cookie] H --\u003e H4[窃取Telegram/Discord数据] H --\u003e H5[获取加密货币钱包] H --\u003e H6[收集系统信息] H --\u003e H7[捕获屏幕/摄像头] H1 \u0026 H2 \u0026 H3 \u0026 H4 \u0026 H5 \u0026 H6 \u0026 H7 --\u003e I[压缩数据准备上传] I --\u003e J[将数据上传到C2服务器] J --\u003e K[执行服务器返回的附加指令] K --\u003e L[下载和执行额外模块] L --\u003e M[执行PowerShell脚本] M --\u003e N{是否自删除} N --\u003e|是| O[删除自身] N --\u003e|否| P[结束执行] O --\u003e P 基本信息 属性 值 恶意软件名称 Predator The Thief (又名Win32.",
     "tags": [
       "病毒",
       "源代码",
@@ -82,8 +75,8 @@ var relearn_searchindex = [
       "BloodyStealer",
       "Source Code"
     ],
-    "title": "Predator The Thief源码分析",
-    "uri": "/%E7%97%85%E6%AF%92%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/predator-the-thief/index.html"
+    "title": "Predator The Thief分析报告",
+    "uri": "/%E7%97%85%E6%AF%92%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/predator-the-thief/code-analysis/index.html"
   },
   {
     "breadcrumb": "hacker 0x0ff \u003e  Tags",
@@ -132,6 +125,44 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Tag :: 病毒",
     "uri": "/tags/%E7%97%85%E6%AF%92/index.html"
+  },
+  {
+    "breadcrumb": "hacker 0x0ff \u003e  Categories",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Category :: 首页",
+    "uri": "/categories/%E9%A6%96%E9%A1%B5/index.html"
+  },
+  {
+    "breadcrumb": "hacker 0x0ff \u003e  病毒源码分析 \u003e  Predator The Thief源码分析",
+    "content": "这是Predator The Thief病毒源码中浏览器密码提取的单独部分，两部分示例代码分别使用python和c语言编写，仅支持edge，Google chrome，以及chrome内核的其他浏览器\n浏览器密码提取 流程图与原理说明 本文档解释浏览器密码提取工具的工作原理和流程。\ngithub\n工作流程图 flowchart TD A[开始] --\u003e B[获取浏览器信息] B --\u003e C{浏览器文件存在?} C --\u003e|否| D[报错: 文件不存在] C --\u003e|是| E[读取加密主密钥] E --\u003e F{主密钥获取成功?} F --\u003e|否| G[报错: 主密钥获取失败] F --\u003e|是| H[复制数据库到临时文件] H --\u003e I[连接SQLite数据库] I --\u003e J[查询密码记录] J --\u003e K[遍历每条密码记录] K --\u003e L{密码格式是v10?} L --\u003e|是| M[使用AES-GCM解密] L --\u003e|否| N[使用DPAPI解密] M --\u003e O[显示解密结果] N --\u003e O O --\u003e P{还有更多记录?} P --\u003e|是| K P --\u003e|否| Q[显示统计信息] Q --\u003e R[结束] 密码解密原理 现代浏览器采用两级加密策略来保护存储的密码：\n主密钥获取 浏览器在Local State文件中存储加密的主密钥 主密钥使用Windows DPAPI (Data Protection API)加密 使用CryptUnprotectData函数解密主密钥 密码解密 v10格式 (Chrome/Edge最新格式) 格式: v10 + IV(12字节) + 加密数据 + 认证标签(16字节) 使用AES-GCM算法和主密钥解密 旧格式 直接使用DPAPI (CryptUnprotectData)解密 实现细节 浏览器密码存储位置 Chrome: %LOCALAPPDATA%\\Google\\Chrome\\User Data\\Default\\Login Data Edge: %LOCALAPPDATA%\\Microsoft\\Edge\\User Data\\Default\\Login Data 主密钥存储位置 Chrome: %LOCALAPPDATA%\\Google\\Chrome\\User Data\\Local State Edge: %LOCALAPPDATA%\\Microsoft\\Edge\\User Data\\Local State 密码数据库 SQLite格式 包含URL、用户名和加密密码 查询: SELECT origin_url, username_value, password_value FROM logins 安全注意事项 本工具仅用于教育目的。未经授权访问他人密码数据可能违反法律法规。使用本工具时请遵守相关法律和道德准则。",
+    "description": "这是Predator The Thief病毒源码中浏览器密码提取的单独部分，两部分示例代码分别使用python和c语言编写，仅支持edge，Google chrome，以及chrome内核的其他浏览器\n浏览器密码提取 流程图与原理说明 本文档解释浏览器密码提取工具的工作原理和流程。\ngithub\n工作流程图 flowchart TD A[开始] --\u003e B[获取浏览器信息] B --\u003e C{浏览器文件存在?} C --\u003e|否| D[报错: 文件不存在] C --\u003e|是| E[读取加密主密钥] E --\u003e F{主密钥获取成功?} F --\u003e|否| G[报错: 主密钥获取失败] F --\u003e|是| H[复制数据库到临时文件] H --\u003e I[连接SQLite数据库] I --\u003e J[查询密码记录] J --\u003e K[遍历每条密码记录] K --\u003e L{密码格式是v10?} L --\u003e|是| M[使用AES-GCM解密] L --\u003e|否| N[使用DPAPI解密] M --\u003e O[显示解密结果] N --\u003e O O --\u003e P{还有更多记录?} P --\u003e|是| K P --\u003e|否| Q[显示统计信息] Q --\u003e R[结束] 密码解密原理 现代浏览器采用两级加密策略来保护存储的密码：",
+    "tags": [
+      "病毒",
+      "源代码",
+      "分析",
+      "Windows",
+      "BloodyStealer",
+      "Source Code"
+    ],
+    "title": "predator the thief浏览器密码提取",
+    "uri": "/%E7%97%85%E6%AF%92%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/predator-the-thief/browser-decipher/index.html"
+  },
+  {
+    "breadcrumb": "hacker 0x0ff \u003e  病毒源码分析",
+    "content": "病毒源码分析报告\n浏览器密码提取",
+    "description": "病毒源码分析报告\n浏览器密码提取",
+    "tags": [
+      "病毒",
+      "源代码",
+      "分析",
+      "Windows",
+      "BloodyStealer",
+      "Source Code"
+    ],
+    "title": "Predator The Thief源码分析",
+    "uri": "/%E7%97%85%E6%AF%92%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/predator-the-thief/index.html"
   },
   {
     "breadcrumb": "hacker 0x0ff \u003e  病毒源码分析",
@@ -409,13 +440,5 @@ var relearn_searchindex = [
     ],
     "title": "获取磁盘dll(未加载)的导出表",
     "uri": "/reflectivedllinjection/%E5%AF%BC%E5%87%BA%E8%A1%A8%E8%8E%B7%E5%8F%96%E7%A3%81%E7%9B%98/index.html"
-  },
-  {
-    "breadcrumb": "hacker 0x0ff",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Categories",
-    "uri": "/categories/index.html"
   }
 ]
