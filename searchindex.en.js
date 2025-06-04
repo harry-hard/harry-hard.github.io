@@ -52,6 +52,72 @@ var relearn_searchindex = [
     "content": "",
     "description": "",
     "tags": [],
+    "title": "Tag :: Persistence",
+    "uri": "/tags/persistence/index.html"
+  },
+  {
+    "breadcrumb": "hacker 0x0ff",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tags",
+    "uri": "/tags/index.html"
+  },
+  {
+    "breadcrumb": "hacker 0x0ff \u003e  持久化技术",
+    "content": "刚刚开始研究",
+    "description": "刚刚开始研究",
+    "tags": [
+      "Persistence",
+      "病毒",
+      "反病毒",
+      "持久化"
+    ],
+    "title": "WMI持久化技术",
+    "uri": "/%E6%8C%81%E4%B9%85%E5%8C%96%E6%8A%80%E6%9C%AF/wmi%E6%8C%81%E4%B9%85%E5%8C%96%E6%8A%80%E6%9C%AF/index.html"
+  },
+  {
+    "breadcrumb": "hacker 0x0ff \u003e  Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: 反病毒",
+    "uri": "/tags/%E5%8F%8D%E7%97%85%E6%AF%92/index.html"
+  },
+  {
+    "breadcrumb": "hacker 0x0ff \u003e  Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: 持久化",
+    "uri": "/tags/%E6%8C%81%E4%B9%85%E5%8C%96/index.html"
+  },
+  {
+    "breadcrumb": "hacker 0x0ff",
+    "content": "WMI持久化技术",
+    "description": "WMI持久化技术",
+    "tags": [
+      "Persistence",
+      "病毒",
+      "反病毒",
+      "持久化"
+    ],
+    "title": "持久化技术",
+    "uri": "/%E6%8C%81%E4%B9%85%E5%8C%96%E6%8A%80%E6%9C%AF/index.html"
+  },
+  {
+    "breadcrumb": "hacker 0x0ff \u003e  Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Tag :: 病毒",
+    "uri": "/tags/%E7%97%85%E6%AF%92/index.html"
+  },
+  {
+    "breadcrumb": "hacker 0x0ff \u003e  Tags",
+    "content": "",
+    "description": "",
+    "tags": [],
     "title": "Tag :: BloodyStealer",
     "uri": "/tags/bloodystealer/index.html"
   },
@@ -87,14 +153,6 @@ var relearn_searchindex = [
     "uri": "/tags/source-code/index.html"
   },
   {
-    "breadcrumb": "hacker 0x0ff",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Tags",
-    "uri": "/tags/index.html"
-  },
-  {
     "breadcrumb": "hacker 0x0ff \u003e  Tags",
     "content": "",
     "description": "",
@@ -117,14 +175,6 @@ var relearn_searchindex = [
     "tags": [],
     "title": "Tag :: 源代码",
     "uri": "/tags/%E6%BA%90%E4%BB%A3%E7%A0%81/index.html"
-  },
-  {
-    "breadcrumb": "hacker 0x0ff \u003e  Tags",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Tag :: 病毒",
-    "uri": "/tags/%E7%97%85%E6%AF%92/index.html"
   },
   {
     "breadcrumb": "hacker 0x0ff \u003e  Categories",
@@ -284,8 +334,8 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "",
-    "content": "欢迎我的朋友 👋 你好！我是 Harry，一名专注于Windows系统恶意软件分析的安全研究员。\n我的研究领域 🔍 恶意软件逆向工程与分析 🛡️ Windows系统漏洞研究 � 病毒行为特征提取 🚫 反病毒规避技术研究 📊 威胁情报分析 常用技术栈 工具集： - IDA Pro - OllyDbg - WinDbg - Wireshark - VirtualBox沙箱环境 编程语言： - C（样本复现） - Python（自动化分析） - PowerShell（系统检测） - Assembly（逆向工程） 最新研究重点 Predator The Thief 恶意病毒(2025/04/20至今)\nPredator The Thief分析\ncheckpoint网站研究\nbloody stealer 信息窃取病毒代码分析(2025/04/19至2025/04/20)\ngithub_code 反射式dll注入(2025/02至2025/04/19)\n反射式dll注入 PE文件加载器(2024-12至2025-02)\nPE Loader",
-    "description": "欢迎我的朋友 👋 你好！我是 Harry，一名专注于Windows系统恶意软件分析的安全研究员。\n我的研究领域 🔍 恶意软件逆向工程与分析 🛡️ Windows系统漏洞研究 � 病毒行为特征提取 🚫 反病毒规避技术研究 📊 威胁情报分析 常用技术栈 工具集： - IDA Pro - OllyDbg - WinDbg - Wireshark - VirtualBox沙箱环境 编程语言： - C（样本复现） - Python（自动化分析） - PowerShell（系统检测） - Assembly（逆向工程） 最新研究重点 Predator The Thief 恶意病毒(2025/04/20至今)\nPredator The Thief分析\ncheckpoint网站研究\nbloody stealer 信息窃取病毒代码分析(2025/04/19至2025/04/20)\ngithub_code 反射式dll注入(2025/02至2025/04/19)\n反射式dll注入 PE文件加载器(2024-12至2025-02)\nPE Loader",
+    "content": "欢迎我的朋友 👋 你好！我是 Harry，一名专注于Windows系统恶意软件分析的安全研究员。\n我的研究领域 🔍 恶意软件逆向工程与分析 🛡️ Windows系统漏洞研究 � 病毒行为特征提取 🚫 反病毒规避技术研究 📊 威胁情报分析 常用技术栈 工具集： - IDA Pro - OllyDbg - WinDbg - Wireshark - VirtualBox沙箱环境 编程语言： - C（样本复现） - Python（自动化分析） - PowerShell（系统检测） - Assembly（逆向工程） 最新研究重点 WMI持久化技术 (2025/6/4)\nWMI持久化 Predator The Thief 恶意病毒(2025/04/20至2025/5/27)\nPredator The Thief分析\ncheckpoint网站研究\nbloody stealer 信息窃取病毒代码分析(2025/04/19至2025/04/20)\ngithub_code 反射式dll注入(2025/02至2025/04/19)\n反射式dll注入 PE文件加载器(2024-12至2025-02)\nPE Loader",
+    "description": "欢迎我的朋友 👋 你好！我是 Harry，一名专注于Windows系统恶意软件分析的安全研究员。\n我的研究领域 🔍 恶意软件逆向工程与分析 🛡️ Windows系统漏洞研究 � 病毒行为特征提取 🚫 反病毒规避技术研究 📊 威胁情报分析 常用技术栈 工具集： - IDA Pro - OllyDbg - WinDbg - Wireshark - VirtualBox沙箱环境 编程语言： - C（样本复现） - Python（自动化分析） - PowerShell（系统检测） - Assembly（逆向工程） 最新研究重点 WMI持久化技术 (2025/6/4)\nWMI持久化 Predator The Thief 恶意病毒(2025/04/20至2025/5/27)\nPredator The Thief分析\ncheckpoint网站研究\nbloody stealer 信息窃取病毒代码分析(2025/04/19至2025/04/20)\ngithub_code 反射式dll注入(2025/02至2025/04/19)\n反射式dll注入 PE文件加载器(2024-12至2025-02)\nPE Loader",
     "tags": [
       "安全研究",
       "逆向工程",
